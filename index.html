@@ -144,6 +144,10 @@
         width: 100%;
     }
 }
+div.content{
+  width: 600px;
+  margin: 0 auto;
+}
   </style>
 
 </head>
@@ -157,67 +161,27 @@
 <body>
   <h2 Id="date">
     <canvas id="canvas" width="400" height="400"></canvas>
-
   </h2>
   <h1>
-    Chloe Murdoch
+    Chloe, awesome person, aspiring programmer!
   </h1>
-
-  <div id="quotes">
-    <div class="quote">
-      <p>
-        "The future belongs to those who believe in the beauty of their dreams."
-      </p>
-      <cite>
-        - Eleanor Roosevelt
-      </cite>
-    </div>
-    <div class="quote">
-      <p>
-        "Nothing is impossible, the word itself says 'I'm possible'!"
-      </p>
-      <cite>
-        - Audrey Hepburn (gc)
-      </cite>
-    </div>
-    <div class="quote">
-      <p>
-        "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that."
-      </p>
-      <cite>
-        - Martin Luther King Jr.
-      </cite>
-    </div>
-    <div class="quote">
-      <p>
-        “You know you're in love when you can't fall asleep because reality is finally better than your dreams.”
-      </p>
-      <cite>
-        - Dr. Seuss
-      </cite>
-    </div>
-
-
+  <div class="content">
+    <p>Hi! I'm Chloe. Programming is awesome so I do it. Here's some things I've built:</p>
+    <ul>
+      <li>
+        <a href="https://kodewithklossy.com/datingsymbol">Kode with Klossy: Dating Symbol Quiz</a>
+        <p>I helped my friend Karlie with a quiz for Valentine's Day 2017 where you find out which dating symbol you are by answering a series of personality questions.</p>
+        <span><strong>Technologies:</strong> HTML, CSS, Javascript</span>
+      </li>
+      <li>
+        <a href="/give-a-dog-a-bone">Give a Dog a Bone: Javascript Game</a>
+        <p>I built a simple game where 2 players compete to find a hidden bone first.</p>
+        <span><strong>Technologies:</strong> HTML, CSS, Javascript</span>
+      </li>
+    </ul>
+    <p></p>
+    <br>
   </div>
-
-  <div id="pictures">
-    <img src= "https://s-media-cache-ak0.pinimg.com/originals/54/99/42/5499428faba9900090d5e829a62ff8f6.jpg">
-    <img src= "https://placekitten.com/g/400/300">
-    <img src= "https://placekitten.com/g/400/300" alt="my pet cat">
-  </div>
-
-  <!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- The Close Button -->
-  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-
-  <!-- Modal Content (The Image) -->
-  <img class="modal-content" id="img01">
-
-  <!-- Modal Caption (Image Text) -->
-  <div id="caption"></div>
-</div>
 </body>
 
 <script>
@@ -241,33 +205,7 @@ function updateTime() {
 
 }
 setInterval(updateTime,1000);
-// Get the modal
-var modal = document.getElementById('myModal');
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var images = document.querySelectorAll("div#pictures img")
-
-for (var image of images) {
-  image.onclick = function(){
-      modal.style.display = "block";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
-  }
-}
-
-
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-
-
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
 
 </script>
 <script>
